@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source "$HOME/.aliases"
+source "$HOME/.functions"
 #add prompt_context(){} to ~/.zshrc to always hide the “user@hostname” info.
 prompt_context(){}
 fastfetch

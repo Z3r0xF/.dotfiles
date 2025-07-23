@@ -1,2 +1,7 @@
-#For random logo in fastfetch
-alias fastfetch="fastfetch --logo $(find ~/Pictures/FastFetch/ -type f \( -iname "*.jpg" -o -iname "*.png" \) | shuf -n 1) --logo-width 30"
+alias fastfetch="fastfetch --logo $(find ~/Pictures/FastFetch/ -type f \( -iname "*.jpg" -o -iname "*.png" \) | shuf -n 1) --logo-width 30" #For random logo in fastfetch
+alias findstring="rg $1 --hidden --smart-case"
+alias findstringall="rga $1 --hidden --smart-case" #also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
+alias flatpaks='flatpak list --columns=application --app' #List installed flatpaks
+alias finddouble="fdupes -r ." #Find duplicate files
+alias filesize="fs" #Using fs from our .functions
+alias feh="feh -Zr.d"
