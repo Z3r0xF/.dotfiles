@@ -1,0 +1,2 @@
+#For random logo in fastfetch
+alias fastfetch="fastfetch --logo $(find ~/Pictures/FastFetch/ -type f \( -iname "*.jpg" -o -iname "*.png" \) | shuf -n 1) --logo-width 30"
