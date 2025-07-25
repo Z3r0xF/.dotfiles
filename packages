@@ -8,14 +8,17 @@ git
 htop
 iftop
 kate
+keepassxc
 konsole
 libvirt
 ncdu
+nmap
 powerline
 pyenv
 qemu-full
 opensnitch
 ripgrep
+rsync
 stow
 ttf-nerd-fonts-symbols
 ttf-hack-nerd

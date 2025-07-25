@@ -1,4 +1,4 @@
-alias fastfetch="fastfetch --logo $(find ~/Pictures/FastFetch/ -type f \( -iname "*.jpg" -o -iname "*.png" \) | shuf -n 1) --logo-width 30" #For random logo in fastfetch
+alias fastfetch="[ -d $HOME/Pictures/FastFetch/ ] && fastfetch --logo $(find ~/Pictures/FastFetch/ -type f \( -iname "*.jpg" -o -iname "*.png" \) | shuf -n 1) --logo-width 30 || fastfetch" #For random logo in fastfetch
 alias findstring="rg $1 --hidden --smart-case"
 alias findstringall="rga $1 --hidden --smart-case" #also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
 alias flatpaks='flatpak list --columns=application --app' #List installed flatpaks
