@@ -107,3 +107,7 @@ source "$HOME/.functions"
 #add prompt_context(){} to ~/.zshrc to always hide the “user@hostname” info.
 prompt_context(){}
 fastfetch
+#for pyenv:
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
