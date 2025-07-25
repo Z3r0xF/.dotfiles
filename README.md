@@ -4,7 +4,7 @@ These are my custom shell aliases and settings for a more personalized experienc
 
 ## Installation
 
-To install the dotfiles, run the following command:
+To install the dotfiles and the packages listed in the `packages` file, run the following command:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/Z3r0xF/.dotfiles/refs/heads/master/install.sh)
@@ -31,3 +31,101 @@ We can easily manage changes using symlinks created by **stow**, allowing us to 
 ```bash
 git pull
 ```
+
+# Software Packages Overview:
+
+<details>
+<summary>Development Tools</summary>
+
+Development tools for programming and software development
+
+| Package | Description |
+|---------|-------------|
+| code    | Code editor |
+| git     | Version control system for software development |
+| kate    | Text editor for programming |
+| pyenv   | Python version manager |
+
+</details>
+
+<details>
+<summary>System Tools</summary>
+
+System tools for managing systems and processes
+
+| Package      | Description                             |
+|--------------|-----------------------------------------|
+| firejail     | Security tool for process isolation     |
+| flatpak      | Package manager for applications        |
+| libvirt      | Library for managing virtual machines    |
+| qemu-full    | Emulator for virtual machines           |
+| stow         | Management of symbolic links            |
+| virt-manager  | Management of virtual machines          |
+
+</details>
+
+<details>
+<summary>Productivity Tools</summary>
+
+Productivity tools for work and organization
+
+| Package  | Description                     |
+|----------|---------------------------------|
+| feh      | Image viewer                    |
+| htop     | System monitoring tool          |
+| iftop    | Network monitoring tool         |
+| ncdu     | Disk usage tool                 |
+| ripgrep  | Search tool for text files      |
+| yt-dlp   | YouTube video downloader        |
+| zsh      | Shell for the command line      |
+
+</details>
+
+<details>
+<summary>Multimedia</summary>
+
+Media players and tools
+
+| Package          | Description               |
+|------------------|---------------------------|
+| vlc              | Media player              |
+| vlc-plugins-all  | Extensions for VLC        |
+
+</details>
+
+<details>
+<summary>Fonts and Design</summary>
+
+Fonts and design tools for the command line
+
+| Package            | Description                          |
+|--------------------|--------------------------------------|
+| powerline          | Tool for customizing the command line |
+| ttf-hack-nerd     | Nerd font for the command line       |
+
+</details>
+
+<details>
+<summary>Network and Security</summary>
+
+Network and security tools
+
+| Package      | Description         |
+|--------------|---------------------|
+| opensnitch   | Firewall tool       |
+
+</details>
+
+<details>
+<summary>Miscellaneous</summary>
+
+Miscellaneous applications
+
+| Package      | Description               |
+|--------------|---------------------------|
+| ark          | Archive manager           |
+| fastfetch    | System information tool    |
+| konsole      | Terminal emulator         |
+
+</details>
+
