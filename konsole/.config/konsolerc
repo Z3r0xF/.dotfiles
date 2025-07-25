@@ -1,0 +1,11 @@
+[Desktop Entry]
+DefaultProfile=Zero.profile
+
+[General]
+ConfigVersion=1
+
+[Notification Messages]
+CloseAllEmptyTabs=true
+
+[UiSettings]
+ColorScheme=
