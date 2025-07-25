@@ -6,12 +6,13 @@ git
 kate
 konsole
 libvirt
-nerdfont
 powerline
 pyenv
 qemu-full
 ripgrep
 stow
+ttf-nerd-fonts-symbols
+ttf-hack-nerd
 vlc
 vlc-plugins-all
 virt-manager
