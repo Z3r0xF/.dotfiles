@@ -1,3 +1,3 @@
 #!/bin/bash
-rm ~/.zshrc
+rm ~/.zshrc ~/.config/konsolerc
 stow konsole zsh
