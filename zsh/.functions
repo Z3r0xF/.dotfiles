@@ -111,8 +111,8 @@ installed() {
   #Check if pacman is installed
   if [ -x "$(command -v pacman)" ]; then
     echo "Arch Packages:"
-    #List all installed packages
-    pacman -Q
+    #List all our installed packages
+    pacman -Qqe | xargs -I{} -P0 --no-run-if-empty pacman -Qs --color=auto "^{}\$"
   fi
 
   echo "------------------------------------"
