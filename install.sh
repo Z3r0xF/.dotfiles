@@ -25,9 +25,26 @@ cat $PACKAGES_FILE | xargs sudo pacman -S --noconfirm
 #Enable services
 sudo systemctl enable opensnitchd
 sudo systemctl start opensnitchd
+systemctl --user start libvirtd.sock
+systemctl --user enable libvirtd.sock
+
+#Prevent prompt authentication virt-manager
+sudo usermod -a -G libvirt $USER
+
+#Enables or disables the automatic startup of a persistent virtual network by the libvirt daemon
+sudo virsh net-autostart default
+sudo virsh net-start default
 
 #Remote add flathub verified
 flatpak remote-add --if-not-exists --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
+
+#Install yay aur
+cd $HOME
+sudo pacman -S base-devel --noconfirm --needed
+git clone https://aur.archlinux.org/yay.git
+cd $HOME/yay
+makepkg -si
+cd $HOME/.dotfiles
 
 #Install oh-my-zsh (Do this as last step to avoid conflicts because shell is set to zsh automatically)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
