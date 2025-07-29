@@ -8,6 +8,12 @@ yt2mp4(){
    yt-dlp -f bestvideo+bestaudio $1
 }
 
+#Get the feed url of youtube video channel
+yt2feed(){
+CHANNELID=$(curl -s $1 | grep -oP '"externalId":"\K[^"]+')
+echo "https://www.youtube.com/feeds/videos.xml?channel_id=$CHANNELID"
+}
+
 finddir(){
 	find . -iname "$1" -type d 2>/dev/null
 }
