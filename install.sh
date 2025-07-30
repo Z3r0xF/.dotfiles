@@ -46,6 +46,13 @@ cd $HOME/yay
 makepkg -si
 cd $HOME/.dotfiles
 
+#Install flatpaks from flathub-verified:
+flatpak install flathub-verified org.inkscape.Inkscape -y
+flatpak install flathub-verified com.discordapp.Discord -y
+flatpak install flathub-verified com.github.tchx84.Flatseal -y
+flatpak install flathub-verified com.obsproject.Studio -y
+
+
 #Install oh-my-zsh (Do this as last step to avoid conflicts because shell is set to zsh automatically)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

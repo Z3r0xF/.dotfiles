@@ -2,6 +2,8 @@
 ark
 code
 dnsmasq
+docker
+docker-compose
 fdupes
 feh
 fastfetch
