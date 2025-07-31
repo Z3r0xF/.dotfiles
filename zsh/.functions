@@ -120,7 +120,9 @@ installed() {
     #List all our installed packages
     pacman -Qqe | xargs -I{} -P0 --no-run-if-empty pacman -Qs --color=auto "^{}\$"
   fi
-
+  echo "------------------------------------"
+  echo "Installed Packages from AUR:"
+  yay -Qm
   echo "------------------------------------"
   echo "Flatpak Packages:"
   #List all flatpak packages
