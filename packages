@@ -8,6 +8,7 @@ authenticator
 dnsmasq
 docker
 docker-compose
+dolphin
 fdupes
 feh
 fastfetch
@@ -21,6 +22,7 @@ htop
 iftop
 kate
 kcalc
+plasma
 keepassxc
 konsole
 less
@@ -56,6 +58,7 @@ vlc
 vlc-plugins-all
 virt-manager
 xclip
+xorg
 yt-dlp
 zed
 zsh

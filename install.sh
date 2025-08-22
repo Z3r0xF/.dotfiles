@@ -22,11 +22,6 @@ fi
 # Read packages file and install them
 cat $PACKAGES_FILE | xargs sudo pacman -S --noconfirm
 
-#Enable services
-sudo systemctl enable opensnitchd
-sudo systemctl start opensnitchd
-systemctl --user start libvirtd.sock
-systemctl --user enable libvirtd.sock
 
 #Prevent prompt authentication virt-manager
 sudo usermod -a -G libvirt $USER
@@ -58,3 +53,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 #Create symlinks with stow by running $HOME/.dotfiles/stow.sh from current directory
 ./stow.sh
+
+#Apply dark breeze theme by kde
+lookandfeeltool -a org.kde.breezedark.desktop
+
+#Enable services
+sudo systemctl enable sddm.service
+sudo systemctl enable NetworkManager.service
+sudo systemctl enable opensnitchd
+sudo systemctl start opensnitchd
+systemctl --user start libvirtd.sock
+systemctl --user enable libvirtd.sock
