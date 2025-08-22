@@ -1,6 +1,6 @@
 7zip
 ark
-adb
+android-tools
 code
 cuda
 cuda-tools
@@ -29,7 +29,6 @@ man-db
 nano
 ncdu
 net-tools
-netstat
 nmap
 nvtop
 obsidian
