@@ -1,6 +1,10 @@
 7zip
 ark
+adb
 code
+cuda
+cuda-tools
+authenticator
 dnsmasq
 docker
 docker-compose
@@ -12,6 +16,7 @@ flatpak
 fzf
 git
 gparted
+handbrake
 htop
 iftop
 kate
@@ -24,6 +29,7 @@ man-db
 nano
 ncdu
 net-tools
+netstat
 nmap
 nvtop
 obsidian
@@ -33,10 +39,13 @@ powerline
 pyenv
 qemu-full
 ripgrep
+rssguard
 rsync
 sbctl
 sddm
+sniffnet
 stow
+tcpdump
 ttf-dejavu
 ttf-droid
 ttf-nerd-fonts-symbols
@@ -49,4 +58,5 @@ vlc-plugins-all
 virt-manager
 xclip
 yt-dlp
+zed
 zsh
