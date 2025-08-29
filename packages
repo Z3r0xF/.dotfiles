@@ -9,6 +9,7 @@ dnsmasq
 docker
 docker-compose
 dolphin
+dotnet-sdk
 fdupes
 feh
 fastfetch
@@ -38,8 +39,10 @@ nvtop
 obsidian
 opensnitch
 peek
+podman
 powerline
 pyenv
+python-pip
 qemu-full
 ripgrep
 rssguard
