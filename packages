@@ -1,10 +1,13 @@
 7zip
 ark
 android-tools
+bind-tools
+blender
 code
 cuda
 cuda-tools
 authenticator
+distrobox
 dnsmasq
 docker
 docker-compose
@@ -45,6 +48,7 @@ pyenv
 python-pip
 qemu-full
 ripgrep
+rpi-imager
 rssguard
 rsync
 sbctl

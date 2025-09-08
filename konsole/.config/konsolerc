@@ -7,5 +7,9 @@ ConfigVersion=1
 [Notification Messages]
 CloseAllEmptyTabs=true
 
+[PrintOptions]
+PrinterFriendly=true
+ScaleOutput=true
+
 [UiSettings]
 ColorScheme=
