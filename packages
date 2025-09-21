@@ -22,6 +22,7 @@ flatpak
 fzf
 git
 gparted
+gvfs-smb
 handbrake
 htop
 iftop

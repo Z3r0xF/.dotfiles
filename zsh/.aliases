@@ -5,3 +5,4 @@ alias flatpaks='flatpak list --columns=application --app' #List installed flatpa
 alias finddouble="fdupes -r ." #Find duplicate files
 alias filesize="fs" #Using fs from our .functions
 alias feh="feh -Zr.d"
+alias lssort="ls -1v"
