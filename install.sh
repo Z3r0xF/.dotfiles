@@ -49,6 +49,7 @@ flatpak install flathub-verified com.obsproject.Studio -y
 flatpak install flathub-verified app/io.github.seadve.Mousai/x86_64/stable -y
 flatpak install flathub-verified app/org.mozilla.Thunderbird/x86_64/stable -y
 flatpak install flathub-verified app/com.ranfdev.DistroShelf/x86_64/stable -y
+flatpak install flathub-verified app/org.gnome.World.PikaBackup -y
 
 #Install oh-my-zsh (Do this as last step to avoid conflicts because shell is set to zsh automatically)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

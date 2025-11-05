@@ -145,3 +145,9 @@ killport() {
     echo "'$1' is not a valid port"
   fi
 }
+
+segment_mp3_to_wav() {
+    for i in *.mp3; do
+        ffmpeg -i "$i" -f segment -segment_time 29.9 -ac 1 -ar 44100 "${i//.mp3/}%03d.wav"
+    done
+}

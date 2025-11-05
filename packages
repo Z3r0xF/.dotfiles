@@ -2,6 +2,7 @@
 ark
 amberol
 android-tools
+audacity
 bind-tools
 blender
 code
@@ -12,6 +13,7 @@ distrobox
 dnsmasq
 docker
 docker-compose
+docker-buildx
 dolphin
 dotnet-sdk
 fdupes
@@ -20,6 +22,7 @@ fastfetch
 firefox
 firejail
 flatpak
+ffmpegthumbs
 fzf
 git
 gparted
