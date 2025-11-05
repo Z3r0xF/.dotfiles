@@ -33,12 +33,6 @@ sudo virsh net-start default
 #Remote add flathub verified
 flatpak remote-add --if-not-exists --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
 
-#Install yay aur
-cd $HOME
-sudo pacman -S base-devel --noconfirm --needed
-git clone https://aur.archlinux.org/yay.git
-cd $HOME/yay
-makepkg -si
 cd $HOME/.dotfiles
 
 #Install flatpaks from flathub-verified:
