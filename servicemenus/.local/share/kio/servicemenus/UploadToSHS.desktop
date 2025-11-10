@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-MimeType=image/*;
+MimeType=image/*;video/*;
 Actions=uploadToSHS
 
 [Desktop Action uploadToSHS]
