@@ -114,5 +114,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 export PATH="$PATH:/var/lib/flatpak/exports/bin/"
 
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
