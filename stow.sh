@@ -1,3 +1,3 @@
 #!/bin/bash
 rm ~/.zshrc ~/.config/konsolerc
-stow konsole zsh
+stow konsole zsh servicemenus

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Service
+MimeType=image/*;
+Actions=uploadToSHS
+
+[Desktop Action uploadToSHS]
+Name=Upload to SHS
+Icon=background
+Exec=konsole -e $HOME/.dotfiles/scripts/SelfHostScreenshot/curl_upload.sh %u
