@@ -32,6 +32,24 @@ We can easily manage changes using symlinks created by **stow**, allowing us to 
 git pull
 ```
 
+## Defining Shortcuts Manually for "SelfHostScreenshot"
+
+To manually define shortcuts in KDE Plasma, refer to the following steps:
+    
+    Open System Settings.
+    
+    Go to Input Devices > Keyboard > Shortcuts.
+    
+    Select the Commands category or create a new one.
+    
+    Click the "+" button to add a new shortcut:
+        For shs_flameshot_upload:
+            Command: $HOME/.dotfiles/scripts/SelfHostScreenshot/flameshot/shs_flameshot_upload.sh
+            Shortcut: Set to Meta+C.
+        For shs_spectacle_video:
+            Command: $HOME/.dotfiles/scripts/SelfHostScreenshot/spectacle/shs_spectacle_video.sh
+            Shortcut: Set to Meta+R.
+    
 # Software Packages Overview:
 
 <details>
@@ -128,4 +146,5 @@ Miscellaneous applications
 | konsole      | Terminal emulator         |
 
 </details>
+Defining Shortcuts Manually
 
