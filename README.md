@@ -57,12 +57,14 @@ To manually define shortcuts in KDE Plasma, refer to the following steps:
 
 Development tools for programming and software development
 
-| Package | Description |
-|---------|-------------|
-| code    | Code editor |
-| git     | Version control system for software development |
-| kate    | Text editor for programming |
-| pyenv   | Python version manager |
+| Package          | Description                          |
+|------------------|--------------------------------------|
+| 7zip             | Command-line archive manager          |
+| code             | Code editor                          |
+| git              | Version control system for software development |
+| kate             | Text editor for programming          |
+| pyenv            | Python version manager               |
+| dotnet-sdk       | .NET SDK for application development  |
 
 </details>
 
@@ -71,14 +73,18 @@ Development tools for programming and software development
 
 System tools for managing systems and processes
 
-| Package      | Description                             |
-|--------------|-----------------------------------------|
-| firejail     | Security tool for process isolation     |
-| flatpak      | Package manager for applications        |
-| libvirt      | Library for managing virtual machines    |
-| qemu-full    | Emulator for virtual machines           |
-| stow         | Management of symbolic links            |
-| virt-manager  | Management of virtual machines          |
+| Package          | Description                             |
+|------------------|-----------------------------------------|
+| android-tools     | Tools for Android device management     |
+| bind-tools        | DNS query tools                        |
+| docker            | Container platform                      |
+| docker-compose    | Tool to define and run multi-container applications |
+| firejail         | Security tool for process isolation     |
+| flatpak          | Package manager for applications        |
+| libvirt          | Library for managing virtual machines    |
+| qemu-full        | Emulator for virtual machines           |
+| stow             | Management of symbolic links            |
+| virt-manager      | Management of virtual machines          |
 
 </details>
 
@@ -87,15 +93,18 @@ System tools for managing systems and processes
 
 Productivity tools for work and organization
 
-| Package  | Description                     |
-|----------|---------------------------------|
-| feh      | Image viewer                    |
-| htop     | System monitoring tool          |
-| iftop    | Network monitoring tool         |
-| ncdu     | Disk usage tool                 |
-| ripgrep  | Search tool for text files      |
-| yt-dlp   | YouTube video downloader        |
-| zsh      | Shell for the command line      |
+| Package          | Description                     |
+|------------------|---------------------------------|
+| fdupes           | Tool for finding duplicate files |
+| feh              | Image viewer                    |
+| htop             | System monitoring tool          |
+| iftop            | Network monitoring tool         |
+| iotop            | I/O monitoring tool             |
+| jq               | JSON processor                  |
+| ncdu             | Disk usage tool                 |
+| ripgrep          | Search tool for text files      |
+| yt-dlp          | YouTube video downloader        |
+| zsh              | Shell for the command line      |
 
 </details>
 
@@ -106,45 +115,9 @@ Media players and tools
 
 | Package          | Description               |
 |------------------|---------------------------|
-| vlc              | Media player              |
-| vlc-plugins-all  | Extensions for VLC        |
-
-</details>
-
-<details>
-<summary>Fonts and Design</summary>
-
-Fonts and design tools for the command line
-
-| Package            | Description                          |
-|--------------------|--------------------------------------|
-| powerline          | Tool for customizing the command line |
-| ttf-hack-nerd     | Nerd font for the command line       |
-
-</details>
-
-<details>
-<summary>Network and Security</summary>
-
-Network and security tools
-
-| Package      | Description         |
-|--------------|---------------------|
-| opensnitch   | Firewall tool       |
-
-</details>
-
-<details>
-<summary>Miscellaneous</summary>
-
-Miscellaneous applications
-
-| Package      | Description               |
-|--------------|---------------------------|
-| ark          | Archive manager           |
-| fastfetch    | System information tool    |
-| konsole      | Terminal emulator         |
-
-</details>
-Defining Shortcuts Manually
-
+| audacity         | Audio editor              |
+| blender          | 3D modeling software       |
+| flameshot        | Screenshot utility         |
+| ffmpegthumbs     | Thumbnail creation tool    |
+| handbrake        | Video transcoder          |
+| obsidian         | Note-taking app
