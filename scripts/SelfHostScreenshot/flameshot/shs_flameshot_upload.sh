@@ -1,10 +1,13 @@
 #!/bin/bash
 # Flameshot command to take a screenshot and save it to a temporary file, then upload it to our SelfhostScreenshot. Highly recommend to create a shortcut in KDE (for example 'Meta+C') for a nice usage
+#Load API Keys
+source $HOME/.secrets
+
 tempfile=$(mktemp /tmp/screenshot.XXXXXX.png)
 flameshot gui -r > "$tempfile"
 
 # Custom URL for our SelfhostScreenshot which we've definied as environment variable
-url=https://$SHS_URL
+url=$SHS_URL
 
 
 # Check if the temporary file was created and is not empty
@@ -16,7 +19,6 @@ fi
 
 response=$(curl -s -F "file=@$tempfile" -H "X-API-Key: $SHS_API_KEY" $url"/upload")
 
-echo $response
 link=$(echo $response | jq -r '.link')
 echo "Upload link: $url$link"
 

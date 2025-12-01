@@ -42,8 +42,8 @@ flatpak install flathub-verified com.github.tchx84.Flatseal -y
 flatpak install flathub-verified com.obsproject.Studio -y
 flatpak install flathub-verified app/io.github.seadve.Mousai/x86_64/stable -y
 flatpak install flathub-verified app/org.mozilla.Thunderbird/x86_64/stable -y
-flatpak install app/com.valvesoftware.Steam/x86_64/stable -y
-
+flatpak install flathub-verified app/org.openshot.OpenShot/x86_64/stable -y
+flatpak install flathub-verified com.github.qarmin.czkawka -y
 #Install oh-my-zsh (Do this as last step to avoid conflicts because shell is set to zsh automatically)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -60,3 +60,5 @@ sudo systemctl enable opensnitchd
 sudo systemctl start opensnitchd
 systemctl --user start libvirtd.sock
 systemctl --user enable libvirtd.sock
+systemctl --user enable cronie.service
+systemctl --user start cronie.service

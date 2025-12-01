@@ -7,6 +7,7 @@ blender
 code
 cuda
 cuda-tools
+cronie
 authenticator
 distrobox
 dnsmasq
@@ -30,11 +31,13 @@ gvfs-smb
 handbrake
 htop
 iftop
+imagemagick
 iotop
 jq
 kate
 kcalc
 plasma
+plasma-x11-session
 keepassxc
 konsole
 less
