@@ -1,6 +1,6 @@
 #!/bin/bash
 #Uses KDE Spectacle to record a video and uploads it to our SelfhostScreenshot. Highly recommend to create a shortcut in KDE (for example 'Meta+R') for a nice usage
-
+#Load API Keys
 source $HOME/.secrets
 
 video_directory="$HOME/Videos/SelfhostScreenshot"
@@ -8,6 +8,7 @@ video_directory="$HOME/Videos/SelfhostScreenshot"
 #Create the directory if it doesn't exist
 mkdir -p "$video_directory"
 
+#BUG - Temporay solution:Because of a known bug in current KDE Spectacle it doesn't work without the LIBVA_DRIVER_NAME variable anymore. Otherwise we produce empty files
 LIBVA_DRIVER_NAME=mesa spectacle --record r -b -n -o "$video_directory/screenshot_$(date +%Y%m%d_%H%M%S).mp4"
 
 #Wait till file is created
