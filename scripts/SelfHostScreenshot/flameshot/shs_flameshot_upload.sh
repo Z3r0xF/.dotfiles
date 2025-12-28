@@ -9,6 +9,7 @@ flameshot gui -r > "$tempfile"
 # Custom URL for our SelfhostScreenshot which we've definied as environment variable
 url=$SHS_URL
 
+echo "URL:".$url
 
 # Check if the temporary file was created and is not empty
 if [ ! -s "$tempfile" ]; then
@@ -18,6 +19,7 @@ if [ ! -s "$tempfile" ]; then
 fi
 
 response=$(curl -s -F "file=@$tempfile" -H "X-API-Key: $SHS_API_KEY" $url"/upload")
+echo "Response:".$response
 
 link=$(echo $response | jq -r '.link')
 echo "Upload link: $url$link"
