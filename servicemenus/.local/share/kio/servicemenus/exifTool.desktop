@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Service
+MimeType=image/*;video/*;
+Actions=viewExif;removeExif
+X-KDE-Submenu=Exif Data
+
+[Desktop Action viewExif]
+Name=View Exif
+Icon=background
+Exec=konsole --noclose -e exiftool %u
+
+[Desktop Action removeExif]
+Name=Remove Exif
+Icon=background
+Exec=exiftool -all= %u

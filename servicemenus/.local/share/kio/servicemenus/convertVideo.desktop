@@ -1,0 +1,25 @@
+[Desktop Entry]
+Type=Service
+MimeType=video/*;
+Actions=convertToGIF;convertToMP4;convertToMOV;convertToMKV
+X-KDE-Submenu=Convert Video
+
+[Desktop Action convertToGIF]
+Name=Convert -> GIF
+Icon=background
+Exec=ffmpeg -i %u -pix_fmt yuv420p %u.gif
+
+[Desktop Action convertToMP4]
+Name=Convert -> MP4
+Icon=background
+Exec=ffmpeg -i %u -pix_fmt yuv420p %u.mp4
+
+[Desktop Action convertToMOV]
+Name=Convert -> MOV
+Icon=background
+Exec=ffmpeg -i %u -pix_fmt yuv420p %u.mov
+
+[Desktop Action convertToMKV]
+Name=Convert -> MKV
+Icon=background
+Exec=ffmpeg -i %u -pix_fmt yuv420p %u.mkv

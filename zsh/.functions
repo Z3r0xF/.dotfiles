@@ -151,3 +151,48 @@ segment_mp3_to_wav() {
         ffmpeg -i "$i" -f segment -segment_time 29.9 -ac 1 -ar 44100 "${i//.mp3/}%03d.wav"
     done
 }
+
+
+createvm() {
+  export VM_NAME="vmname"
+  export VM_ISO="$(pwd)/debian-13.2.0-amd64-DVD-1.iso"
+  export VM_OS="debian13"
+  export VM_IMG="debian13.qcow2"
+  export VM_CORES=1      
+  export VM_DISKSIZE=20  
+  export VM_RAMSIZE=4096 
+  export VM_NET="default"
+
+
+  #Prompt the user to select a preseed file before creating the VM
+  # Select a preseed file
+  echo "Select a preseed file:"
+  select PRESEED_CFG in $HOME/.dotfiles/vm_preseeds/*.cfg; do
+    if [[ -n "$PRESEED_CFG" ]]; then
+      echo "Selected: $PRESEED_CFG"
+      # Copy the selected preseed file to the current directory
+      cp "$PRESEED_CFG" "$(pwd)/preseed.cfg"
+      break
+    else
+      echo "Invalid selection. Please try again."
+    fi
+  done
+
+  #Check if iso exists
+  if [ ! -f "${VM_ISO}" ]; then
+    echo "No ISO found in $(pwd)/${VM_ISO}"
+    return
+  fi
+
+  sudo virt-install \
+    --os-variant=${VM_OS} \
+    --vcpu=${VM_CORES} \
+    --ram=${VM_RAMSIZE} \
+    --disk path="${VM_IMG}",size="${VM_DISKSIZE}" \
+    --check path_in_use=off \
+    --graphics spice \
+    --network network=${VM_NET},model=virtio \
+    --initrd-inject "$(pwd)/preseed.cfg" \
+    --location "${VM_ISO}"
+    #Use this to download debian iso automatically: --location "http://deb.debian.org/debian/dists/stable/main/installer-amd64/" \
+}
