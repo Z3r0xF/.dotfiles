@@ -6,7 +6,6 @@ bind-tools
 blender
 code
 cuda
-cuda-tools
 cronie
 authenticator
 distrobox
@@ -54,6 +53,7 @@ peek
 pika-backup
 podman
 powerline
+pwgen
 pyenv
 python-pip
 qemu-full
@@ -76,6 +76,7 @@ unzip
 vlc
 vlc-plugins-all
 virt-manager
+virt-viewer
 xclip
 xorg
 yt-dlp
