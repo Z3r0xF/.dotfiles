@@ -153,8 +153,7 @@ segment_mp3_to_wav() {
 }
 
 
-createvm() {
-  export VM_NAME="vmname"
+create_vm_debian() {
   export VM_ISO="$(pwd)/debian-13.2.0-amd64-DVD-1.iso"
   export VM_OS="debian13"
   export VM_IMG="debian13.qcow2"
@@ -195,4 +194,40 @@ createvm() {
     --initrd-inject "$(pwd)/preseed.cfg" \
     --location "${VM_ISO}"
     #Use this to download debian iso automatically: --location "http://deb.debian.org/debian/dists/stable/main/installer-amd64/" \
+}
+
+
+create_vm_arch() {
+  export VM_ISO="$(pwd)/archlinux.iso"
+  export VM_OS="archlinux"
+  export VM_IMG="archlinux.qcow2"
+  export VM_CORES=1      
+  export VM_DISKSIZE=20  
+  export VM_RAMSIZE=4096 
+  export VM_NET="default"
+
+  #Check if iso exists
+  if [ ! -f "${VM_ISO}" ]; then
+    echo "No ISO found in $(pwd)/${VM_ISO}"
+    return
+  fi
+
+  #Create a folder which contains our archinstall script which we mount into the VM
+  mkdir -p archinstall
+  cp archinstall.sh archinstall
+
+  echo "Use in VM and run our archinstall.sh: mount -t 9p -o trans=virtio /mnt/archinstall ~/archinstall --mkdir"
+
+  sudo virt-install \
+    --os-variant=${VM_OS} \
+    --vcpu=${VM_CORES} \
+    --ram=${VM_RAMSIZE} \
+    --disk path="${VM_IMG}",size="${VM_DISKSIZE}" \
+    --check path_in_use=off \
+    --graphics spice \
+    --network network=${VM_NET},model=virtio \
+    --cdrom "${VM_ISO}" \
+    --boot uefi \
+    --filesystem type=mount,source="$(pwd)/archinstall",target=/mnt/archinstall
+
 }
