@@ -6,3 +6,4 @@ alias finddouble="fdupes -r ." #Find duplicate files
 alias filesize="fs" #Using fs from our .functions
 alias feh="feh -Zr.d"
 alias lssort="ls -1v"
+alias scanqr="flameshot gui -r | zbarimg -1q --raw - | wl-copy"
