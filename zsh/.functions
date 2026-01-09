@@ -179,7 +179,7 @@ create_vm_debian() {
 
   #Check if iso exists
   if [ ! -f "${VM_ISO}" ]; then
-    echo "No ISO found in $(pwd)/${VM_ISO}"
+    echo "No ISO found in ${VM_ISO}"
     return
   fi
 
@@ -201,8 +201,12 @@ create_vm_arch() {
   export VM_ISO="$(pwd)/archlinux.iso"
   export VM_OS="archlinux"
   export VM_IMG="archlinux.qcow2"
+  export VM_IMG_SEC="secdisk.qcow2"
+  export VM_IMG_CACHE="cache.qcow2"
   export VM_CORES=1      
-  export VM_DISKSIZE=20  
+  export VM_DISKSIZE=20
+  export VM_DISKCACHESIZE=50
+  export VM_SEC_DISKSIZE=2  
   export VM_RAMSIZE=4096 
   export VM_NET="default"
 
@@ -212,17 +216,19 @@ create_vm_arch() {
     return
   fi
 
-  #Create a folder which contains our archinstall script which we mount into the VM
+  #Create a folder which contains our archinstall scripts and ressources which we mount into the VM
   mkdir -p archinstall
-  cp archinstall.sh archinstall
 
   echo "Use in VM and run our archinstall.sh: mount -t 9p -o trans=virtio /mnt/archinstall ~/archinstall --mkdir"
+  echo "In case we use a cache for pacstrap we can mount our created VM_DISKCACHESIZE with mount /dev/sdc ~/customcache --mkdir"
 
   sudo virt-install \
     --os-variant=${VM_OS} \
     --vcpu=${VM_CORES} \
     --ram=${VM_RAMSIZE} \
-    --disk path="${VM_IMG}",size="${VM_DISKSIZE}" \
+    --disk path="${VM_IMG}",size="${VM_DISKSIZE}",bus=sata \
+    --disk path="${VM_IMG_SEC}",size="${VM_SEC_DISKSIZE}",bus=sata \
+    --disk path="${VM_IMG_CACHE}",size="${VM_DISKCACHESIZE}",bus=sata \
     --check path_in_use=off \
     --graphics spice \
     --network network=${VM_NET},model=virtio \

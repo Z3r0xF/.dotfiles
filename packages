@@ -2,12 +2,12 @@
 ark
 android-tools
 audacity
+authenticator
 bind-tools
 blender
 code
 cuda
 cronie
-authenticator
 distrobox
 dnsmasq
 docker
@@ -72,6 +72,7 @@ ttf-nerd-fonts-symbols
 ttf-hack-nerd
 ttf-ubuntu-font-family
 unp
+usbutils
 unzip
 vlc
 vlc-plugins-all
